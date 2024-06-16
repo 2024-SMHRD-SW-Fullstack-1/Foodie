@@ -4,11 +4,13 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * Handles requests for the application home page.
@@ -69,14 +71,27 @@ public class HomeController {
 		return "checkout";
 	}
 	
-	@Controller
-	public class ChatbotController {
-
-	    @GetMapping("/chatbot")
-	    public String chatbot(Model model) {
-	        model.addAttribute("initMessage", "안녕하세요? 어떤 레시피를 추천해드릴까요?");
-	        return "chatbot";
-	    }
+//	@Controller
+//	public class ChatbotController {
+//
+//	    @GetMapping("/chatbot")
+//	    public String chatbot(Model model) {
+//	        model.addAttribute("initMessage", "안녕하세요? 어떤 레시피를 추천해드릴까요?");
+//	        return "chatbot";
+//	    }
+//	}
+	
+	// ChatGPT Api
+	private String openaiApiKey = "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";
+	
+	@Bean
+	public RestTemplate restTemplate() {
+		RestTemplate restTemplate = new RestTemplate();
+	    restTemplate.getInterceptors().add((request, body, execution) -> {
+	        request.getHeaders().add("Authorization", "Bearer " + openaiApiKey);
+	        return execution.execute(request, body);
+	    });
+		return restTemplate;
 	}
 	
 }
