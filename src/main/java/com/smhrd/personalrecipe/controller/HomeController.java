@@ -1,9 +1,10 @@
-package com.smhrd.personalrecipe;
+package com.smhrd.personalrecipe.controller;
 
 import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -82,7 +83,8 @@ public class HomeController {
 //	}
 	
 	// ChatGPT Api
-	private String openaiApiKey = "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";
+	@Value("${openai.api.key}")
+    private String openaiApiKey;
 	
 	@Bean
 	public RestTemplate restTemplate() {
