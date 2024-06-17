@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
@@ -62,7 +63,51 @@
     <!-- Humberger End -->
 
     <!-- Header Section Begin -->
-    <%@ include file="./header.jsp"%>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> hello@smhrd.com</li>
+                                <li>5만원 이상 구매 시 무료배송</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__auth">
+                                <a href="#"><i class="fa fa-user"></i> 로그인 / 회원가입</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="index"><img src="resources/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
@@ -77,15 +122,15 @@
                             <span>카테고리</span>
                         </div>
                         <ul>
-                            <li><a href="#">채소</a></li>
-                            <li><a href="#">과일</a></li>
-                            <li><a href="#">정육</a></li>
-                            <li><a href="shopgrid">수산</a></li>
-                            <li><a href="#">쌀ㆍ잡곡</a></li>
-                            <li><a href="#">면ㆍ오일</a></li>
+                            <li><a href="#">주부 레시피</a></li>
+                            <li><a href="#">자취생 레시피</a></li>
+                            <li><a href="#">다이어트 레시피</a></li>
+                            <li><a href="shopgrid">캠핑 레시피</a></li>
+                            <li><a href="#">파디 레시피</a></li>
+                            <li><a href="#">야식 레시피</a></li>
                             <li><a href="#">우유ㆍ유제품</a></li>
                             <li><a href="#">소스ㆍ조미료</a></li>
-                            <li><a href="recipe">레시피</a></li>
+                            <li><a href="recipe">재료 보러가기</a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,7 +178,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h6><span class="icon_tag_alt"></span> 5만원 이상 무료배송 <a href="index">Click here</a> 계속 쇼핑하기
+                    <h6><span class="icon_tag_alt"></span> 먹고 싶은 메뉴에 맞게 편리하게 쇼핑해보세요!  <a href="index"> 계속 쇼핑하기 </a>
                     </h6>
                 </div>
             </div>
@@ -156,20 +201,36 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="checkout__input">
-                                <p>이메일<span>*</span></p>
-                                <input type="text">
-                            </div>
+                            
+                            <div class="row">
+                            	<div class="col-lg-6">
+                            		<div class="checkout__input">
+                                		<p>이메일<span>*</span></p>
+                                		<input type="text">                        
+									</div>
+								</div>
+								<div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>  @<span></span></p>
+                                        <select>
+                                        	<option>gmail.com</option>
+                                        	<option>naver.com</option>
+                                        	<option>daum.net</option>
+                                        </select>
+                                    </div>
+                                </div>
+							</div>
+							
                             <div class="checkout__input">
                                 <p>주소<span>*</span></p>
                                 <input type="text" placeholder="도로명 주소" class="checkout__input__add">
-                                <input type="text" placeholder="주소 세부사항(선택)">
+                                <input type="text" placeholder="주소 세부사항">
                             </div>
                             <div class="checkout__input">
-                                <p>배송요청사항<span>*</span></p>
-                                <input type="text">
+                                <p>배송요청사항<span></span></p>
+                                <input type="text" placeholder="부재시 문앞에 놓아주세요">
                             </div>
-                            <!--  -->
+                            <!-- 
                            <div class="checkout__input">
                                 <p>Country/State<span>*</span></p>
                                 <input type="text">
@@ -217,6 +278,7 @@
                                 <input type="text"
                                     placeholder="Notes about your order, e.g. special notes for delivery.">
                             </div>
+                             -->
                         </div>
                         
                         <div class="col-lg-4 col-md-6">
@@ -238,20 +300,20 @@
                                     </label>
                                 </div>
                                 <p>
-                                5만원 이상 구매시 무료배송입니다
-                                주문내용을 다시 한번 확인해주세요
+                                <b>5만원 이상 구매 시 무료배송</b> 입니다 .<br>
+                                주문 내용을 다시 한 번 확인해주세요.
                                 </p>
                                 <div class="checkout__input__checkbox">
-                                    <label for="payment">
+                                    <label for="cardpay">
                                         카드결제
-                                        <input type="radio" name="pay" id="payment">
+                                        <input type="radio" name="pay" id="cardpay">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="checkout__input__checkbox">
-                                    <label for="paypal">
+                                    <label for="kakaopay">
                                         카카오페이
-                                        <input type="radio" name="pay" id="paypal">
+                                        <input type="radio" name="pay" id="kakaopay">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -266,7 +328,71 @@
     <!-- Checkout Section End -->
 
     <!-- Footer Section Begin -->
-    <%@ include file="./footer.jsp"%>
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="index"><img src="resources/img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello@colorlib.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Delivery infomation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Innovation</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <!-- <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="footer__copyright__payment"><img src="resources/img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
@@ -279,6 +405,7 @@
     <script src="resources/js/owl.carousel.min.js"></script>
     <script src="resources/js/main.js"></script>
     <script src="resources/js/checkout.js"></script>
+    
     <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
     
     <!-- jQuery -->
@@ -286,28 +413,34 @@
     <!-- iamport.payment.js -->
     <!-- <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script> -->
 
-	<script>
-		var IMP = window.IMP; // 생략 가능
-	  	IMP.init("imp51542456");
-	  	/* IMP.agency("imp51542456", 'ABC'); */
+	  <script>
+	  var IMP = window.IMP; // 생략 가능
+	  IMP.init("imp51542456");
+	  /* IMP.agency("imp51542456", 'ABC'); */
 	  
-	  	function requestPay() {
-			IMP.request_pay({
-		        pg: "html5_inicis",
-		        pay_method: "card",
-		        merchant_uid: "ORD20180131-0000011",   // 주문번호
-		        name: "신선한 봉투",
-		        amount: 64900,                         // 숫자 타입
-		        buyer_email: "gildong@gmail.com",
-		        buyer_name: "이승지",
-		        buyer_tel: "010-1234-8282",
-		        buyer_addr: "광주광역시 동구 충장동",
-		        buyer_postcode: "01181",
-			}, function (rsp) { // callback
-        		//rsp.imp_uid 값으로 결제 단건조회 API를 호출하여 결제결과를 판단합니다.
-           		console.log(rsp)
-	      	});
-		}
-	</script>
+	  function requestPay() {
+		  //if($("#cardpay"))
+	       IMP.request_pay({
+	         pg: "html5_inicis",
+	         pay_method: "card",
+	         merchant_uid: "ORD20240131-0000011",   // 주문번호
+	         name: "퍼스널레시피",
+	         amount: 31000,                         // 숫자 타입
+	         buyer_email: "gildong@gmail.com",
+	         buyer_name: "이승지",
+	         buyer_tel: "010-1234-8282",
+	         buyer_addr: "광주광역시 동구 충장동",
+	         buyer_postcode: "01181"
+	       }, function (rsp) { // callback
+	         //rsp.imp_uid 값으로 결제 단건조회 API를 호출하여 결제결과를 판단합니다.
+	            console.log(rsp)
+	         
+	       });
+	     }
+	  </script>
+
+ 
+
 </body>
+
 </html>
