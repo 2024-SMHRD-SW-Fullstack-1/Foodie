@@ -77,14 +77,14 @@ public class HomeController {
 //
 //	    @GetMapping("/chatbot")
 //	    public String chatbot(Model model) {
-//	        model.addAttribute("initMessage", "¾È³çÇÏ¼¼¿ä? ¾î¶² ·¹½ÃÇÇ¸¦ ÃßÃµÇØµå¸±±î¿ä?");
+//	        model.addAttribute("initMessage", "ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½? ï¿½î¶² ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½Ãµï¿½Øµå¸±ï¿½ï¿½ï¿½?");
 //	        return "chatbot";
 //	    }
 //	}
 	
 	// ChatGPT Api
 	@Value("${openai.api.key}")
-    private String openaiApiKey;
+	private String openaiApiKey;
 	
 	@Bean
 	public RestTemplate restTemplate() {
@@ -95,5 +95,4 @@ public class HomeController {
 	    });
 		return restTemplate;
 	}
-	
 }
