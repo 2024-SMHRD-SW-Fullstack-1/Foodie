@@ -1,11 +1,12 @@
 package com.smhrd.personalrecipe.controller;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
 import com.smhrd.personalrecipe.model.ChatCompletionRequest;
 import com.smhrd.personalrecipe.model.ChatCompletionResponse;
 
@@ -26,7 +27,7 @@ public class ChatbotController {
 											chatCompletionRequest,
 											ChatCompletionResponse.class);
 				
-		System.out.println("ChatGPT Æ÷½ºÆ® ¿äÃ»!");
+		System.out.println("ChatGPT POST í†µì‹ !");
 		return response.getChoices().get(0).getMessage().getContent();
 	}
 }

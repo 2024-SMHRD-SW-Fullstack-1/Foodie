@@ -21,9 +21,18 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
+	// ChatGPT API
+	@Value("${openai.api.key}")
+  private String openaiApiKey;
+	
+	// ChatGPT API Key ì¶œë ¥
+	public void showApiKey() {
+		System.out.println("api.key : " + openaiApiKey);
+	}
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		
+		showApiKey();
 		return "index";
 	}
 	
@@ -77,15 +86,12 @@ public class HomeController {
 //
 //	    @GetMapping("/chatbot")
 //	    public String chatbot(Model model) {
-//	        model.addAttribute("initMessage", "¾È³çÇÏ¼¼¿ä? ¾î¶² ·¹½ÃÇÇ¸¦ ÃßÃµÇØµå¸±±î¿ä?");
+//	        model.addAttribute("initMessage", "ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½? ï¿½î¶² ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½Ãµï¿½Øµå¸±ï¿½ï¿½ï¿½?");
 //	        return "chatbot";
 //	    }
 //	}
 	
-	// ChatGPT Api
-	@Value("${openai.api.key}")
-    private String openaiApiKey;
-	
+	// ChatGPT API
 	@Bean
 	public RestTemplate restTemplate() {
 		RestTemplate restTemplate = new RestTemplate();
