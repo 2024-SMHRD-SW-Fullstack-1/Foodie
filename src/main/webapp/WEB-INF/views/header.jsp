@@ -25,7 +25,9 @@
                <div class="col-lg-6">
                    <div class="header__top__right">
                        <div class="header__top__right__auth">
-                           <a href="login"><i class="fa fa-user"></i> 로그인 / 회원가입</a>
+                        <span style="display: inline-block; margin-right: 10px;"><a href="join">회원가입</a></span>
+  						<span style="display: inline-block; margin-right: 10px;"><a href="login">로그인</a></span>
+  						<span style="display: inline-block;"><a href="mypage">마이페이지</a></span>
                        </div>
                    </div>
                </div>
