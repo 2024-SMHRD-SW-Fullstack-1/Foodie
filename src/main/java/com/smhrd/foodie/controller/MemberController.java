@@ -1,5 +1,7 @@
 package com.smhrd.foodie.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,9 +67,9 @@ public class MemberController {
 	
 	// 로그인 확인 메소드
 	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public String loginCheck() {
+	public String loginCheck(@RequestParam("id") String id, @RequestParam("pw") String pw, HttpSession session ) {
 		
-		
+		// 고유한 세션ID 발급
 		
 		return "index";
 	}
