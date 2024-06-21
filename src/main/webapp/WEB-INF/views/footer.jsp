@@ -17,7 +17,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about">
                     <div class="footer__about__logo">
-                        <a href="index"><img src="resources/img/logo.png" alt=""></a>
+                        <a href="/foodie"><img src="resources/img/logo.png" alt=""></a>
                     </div>
                     <ul>
                         <li>(주)Foodie</li>

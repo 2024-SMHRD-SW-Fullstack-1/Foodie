@@ -90,26 +90,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-9">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                 <input type="text" placeholder="푸디 제품, 요리명 등 다양하게 검색해보세요 !">
-                                <button onclick="search()" type="submit" class="site-btn">검색</button>
-                                <div id="results"></div>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                           <button onclick="openChatbot()" id="chatbot-btn"><i class="fa fa-comments"></i></button>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>재료 추천받기</h5>
-                                <span>24시간 챗봇 상담</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero__item set-bg" data-setbg="resources/img/hero/main_visual.jpg">
+               <!-- Header Section Begin -->
+    <%@ include file="./search.jsp"%>
+    <!-- Header Section End -->
+                    <div class="hero__item set-bg" data-setbg="resources/img/hero/banner.jpg">
                         <div class="hero__text">
                             <span>쉽고 빠르게 따라 할 수있는!</span>
                             <h2>새내기 요리사 <br />파티 레시피</h2>
@@ -125,7 +109,7 @@
 <section class="categories">
         <div class="container">
             <div class="section-title">
-                <h2>인기 레시피</h2>
+                <h2>인기 레시피👍</h2>
             </div>
             <div class="featured__controls">
                 <ul>
@@ -137,8 +121,9 @@
                     <c:forEach var="recipe" items="${popularList}">
                         <div class="col-lg-3">
                             <div class="categories__item set-bg" data-setbg="<c:url value='resources/img${recipe.recipe_title_img}'/>">
-                                <h5><a href="#">${recipe.recipe_name}</a></h5>
+                                
                             </div>
+                            <h5><a href="#">${recipe.recipe_name}</a></h5>
                         </div>
                     </c:forEach>
                 </div>
@@ -148,7 +133,7 @@
     <section class="categories">
         <div class="container">
             <div class="section-title">
-                <h2>추천 레시피</h2>
+                <h2>추천 레시피💕</h2>
             </div>
             <div class="featured__controls">
                 <ul>
@@ -157,41 +142,57 @@
             </div>
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    <c:forEach var="recipe" items="${newList}">
+                    <c:forEach var="recipe" items="${recommendedList}">
                         <div class="col-lg-3">
                             <div class="categories__item set-bg" data-setbg="<c:url value= 'resources/img${recipe.recipe_title_img}'/>">
-                                <h5><a href="#">${recipe.recipe_name}</a></h5>
+                      
                             </div>
+                             <h5><a href="#">${recipe.recipe_name}</a></h5>
                         </div>
                     </c:forEach>
                 </div>
             </div>
         </div>
     </section>
-    <section class="from-blog spad">
-        <div class="container">
+   <!-- Blog Section Begin -->
+<section class="from-blog spad">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
             <div class="section-title from-blog__title">
-                <h2>new 레시피</h2>
+               <h2>✨new 레시피✨</h2>
             </div>
-            <div class="row">
-               <c:forEach var="recipe" items="${allList}">
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <c:url value='resources/img${recipe.recipe_title_img}' />
-                            </div>
-                            <div class="blog__item__text">
-                                <h5><a href="#">${recipe.recipe_name}</a></h5>
-                            </div>
-                        </div>
-                    </div>
-                </c:forEach>
+         </div>
+      </div>
+      <div class="row">
+         <!-- JSTL을 사용하여 newList를 동적으로 렌더링합니다. -->
+         <c:forEach var="recipe" items="${newList}">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <div class="blog__item">
+                  <div class="blog__item__pic">
+                     <!-- 이미지 URL을 동적으로 설정 -->
+                     <img src="<c:url value='/resources/img/${recipe.recipe_title_img}' />" alt="">
+                  </div>
+                  <div class="blog__item__text">
+                    <ul>
+                        <!-- 날짜를 동적으로 설정 -->
+                        <li><i class="fa fa-calendar-o"></i></li>
+                     </ul>
+                     <h5>
+                        <!-- 레시피 이름을 동적으로 설정 -->
+                        <a href="#">${recipe.recipe_name}</a>
+                     </h5>
+                     <p>${recipe.recipe_content} </p>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
-    <!-- Categories Section Begin -->
-    
-    <!-- Blog Section End -->
+         </c:forEach>
+      </div>
+   </div>
+</section>
+<!-- Blog Section End -->
+
+
 
     <!-- Footer Section Begin -->
    <%@ include file="./footer.jsp"%>

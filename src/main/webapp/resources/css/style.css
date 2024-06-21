@@ -82,7 +82,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	color: #111111;
-	font-weight: 400;
+	font-weight: 700;
 	font-family: "나눔 고딕", sans-serif;
 }
 
@@ -91,7 +91,7 @@ h1 {
 }
 
 h2 {
-	font-size: 38px;
+	font-size: 35px;
 }
 
 h3 {
@@ -103,7 +103,7 @@ h4 {
 }
 
 h5 {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 h6 {
@@ -130,7 +130,7 @@ input:focus, select:focus, button:focus, textarea:focus {
 a:hover, a:focus {
 	text-decoration: none;
 	outline: none;
-	color: #ffffff;
+	color: #000000;
 }
 
 ul, ol {
@@ -155,9 +155,10 @@ ul, ol {
 }
 
 /*---------------------
-  Helper CSS
+  Helper CSS 마진 탑 추가
 -----------------------*/
 .section-title {
+	margin-top: 50px;
 	margin-bottom: 50px;
 	text-align: center;
 }
@@ -811,7 +812,7 @@ transparent
   Hero
 -----------------------*/
 .hero {
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 }
 
 .hero.hero-normal {
@@ -1019,17 +1020,13 @@ transparent
 	bottom: 20px;
 	text-align: center;
 }
-
-.categories__item h5 a {
-	font-size: 18px;
-	color: #1c1c1c;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	padding: 12px 0 10px;
-	background: #ffffff;
-	display: block;
+.hero__categories__all {
+   background: var(--primary-color);
+   position: relative;
+   padding: 10px 25px 10px 40px;
+   cursor: pointer;
 }
+
 
 .categories__slider .col-lg-3 {
 	max-width: 100%;
@@ -1370,7 +1367,7 @@ transparent
 
 .price-range-wrap .range-slider .price-input:after {
 	position: absolute;
-	left: 38px;
+	left: 35px;
 	top: 13px;
 	height: 1px;
 	width: 5px;
@@ -1975,7 +1972,7 @@ transparent
 	font-size: 18px;
 	color: #1c1c1c;
 	list-style: none;
-	line-height: 38px;
+	line-height: 35px;
 }
 
 .product__details__text ul li b {
@@ -2863,7 +2860,7 @@ transparent
 .footer__about ul li {
 	font-size: 18px;
 	color: #1c1c1c;
-	line-height: 38px;
+	line-height: 35px;
 	list-style: none;
 }
 
@@ -2941,7 +2938,7 @@ transparent
 	color: #404040;
 	border: 1px solid #ededed;
 	border-radius: 50%;
-	line-height: 38px;
+	line-height: 35px;
 	text-align: center;
 	background: #ffffff;
 	-webkit-transition: all, 0.3s;
@@ -2993,7 +2990,7 @@ transparent
 }
 
 .contact__widget span {
-	font-size: 38px;
+	font-size: 35px;
 	color: var(--primary-color);
 }
 
@@ -3137,7 +3134,7 @@ transparent
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1800px;
+		max-width: 1700px;
 	}
 }
 

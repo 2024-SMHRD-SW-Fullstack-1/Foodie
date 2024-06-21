@@ -11,9 +11,9 @@ public interface RecipeInfoMapper {
     @Select("SELECT * FROM recipe_info ORDER BY recipe_views_cnt DESC LIMIT 5")
     List<RecipeInfo> findPopularRecipes();
 
-    @Select("SELECT * FROM recipe_info ORDER BY recipe_views_cnt DESC LIMIT 5")
+    @Select("SELECT * FROM recipe_info ORDER BY recipe_views_cnt DESC LIMIT 3")
     List<RecipeInfo> findNewRecipes();
 
-    @Select("SELECT * FROM recipe_info ORDER BY recipe_views_cnt DESC LIMIT 3")
-    List<RecipeInfo> findAll();
+    @Select("SELECT * FROM recipe_info ORDER BY RAND() LIMIT 5")
+    List<RecipeInfo> findRecommendedRecipes();
 }
