@@ -2,6 +2,7 @@ package com.smhrd.foodie.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
+
 @Mapper
 public interface MemberMapper {
 	
@@ -15,4 +16,5 @@ public interface MemberMapper {
 	void editPw();
 	
 	int delete(String id);
+
 }

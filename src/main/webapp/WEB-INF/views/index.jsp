@@ -11,7 +11,9 @@
     <title>Foodie</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css">
@@ -34,7 +36,7 @@
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="index"><img src="resources/img/banner/logo.png" alt=""></a>
+            <a href="/"><img src="resources/img/banner/logo.png" alt=""></a>
         </div>
         <div class="humberger__menu__cart">
             <ul>
@@ -72,8 +74,9 @@
                 <div class="col-lg-3">
                     <div class="hero__categories">
                         <div class="hero__categories__all">
+                        
                             <i class="fa fa-bars"></i>
-                            <span>레시피 카테고리</span>
+                            <span>카테고리</span>
                         </div>
                         <ul>
                             <li><a href="#">주부 레시피</a></li>
@@ -91,8 +94,9 @@
                     <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
-                                <input type="text" placeholder="">
-                                <button type="submit" class="site-btn">검색</button>
+                                 <input type="text" placeholder="푸디 제품, 요리명 등 다양하게 검색해보세요 !">
+                                <button onclick="search()" type="submit" class="site-btn">검색</button>
+                                <div id="results"></div>
                             </form>
                         </div>
                         <div class="hero__search__phone">
@@ -118,158 +122,75 @@
         </div>
     </section>
     <!-- Hero Section End -->
-
-    <!-- Categories Section Begin -->
-    <section class="categories">
+<section class="categories">
         <div class="container">
-           <div class="section-title">
-               <h2>인기 레시피</h2>
-                </div>
-                <div class="featured__controls">
-                   <ul>
-                       <li>푸디에서 많은 분들이 찾아본 인기 레시피를 소개합니다.</li>
-                    </ul>
-                </div>
+            <div class="section-title">
+                <h2>인기 레시피</h2>
+            </div>
+            <div class="featured__controls">
+                <ul>
+                    <li>푸디에서 많은 분들이 찾아본 인기 레시피를 소개합니다.</li>
+                </ul>
+            </div>
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-1.jpg">
-                            <h5><a href="#">명란마요초밥</a></h5>
+                    <c:forEach var="recipe" items="${popularList}">
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="<c:url value='resources/img${recipe.recipe_title_img}'/>">
+                                <h5><a href="#">${recipe.recipe_name}</a></h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-2.jpg">
-                            <h5><a href="#">매콤홍합탕</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-3.jpg">
-                            <h5><a href="#">들기름 막국수</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-4.jpg">
-                            <h5><a href="#">마늘통삼겹구이</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-5.jpg">
-                            <h5><a href="#">두부참치전</a></h5>
-                        </div>
-                    </div>
+                    </c:forEach>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Categories Section End -->
-    
-    <br></br>
-    
     <section class="categories">
         <div class="container">
-           <div class="section-title">
-               <h2>추천 레시피</h2>
-                </div>
-                <div class="featured__controls">
-                   <ul>
-                       <li>푸디가 제안하는 레시피로 최고의 요리를 만들어보세요.</li>
-                    </ul>
-                </div>
+            <div class="section-title">
+                <h2>추천 레시피</h2>
+            </div>
+            <div class="featured__controls">
+                <ul>
+                    <li>푸디가 제안하는 레시피로 최고의 요리를 만들어보세요.</li>
+                </ul>
+            </div>
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-1.jpg">
-                            <h5><a href="#">대파파스타</a></h5>
+                    <c:forEach var="recipe" items="${newList}">
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="<c:url value= 'resources/img${recipe.recipe_title_img}'/>">
+                                <h5><a href="#">${recipe.recipe_name}</a></h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-2.jpg">
-                            <h5><a href="#">고추장크림떡볶이</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-3.jpg">
-                            <h5><a href="#">칠리새우덮밥</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-4.jpg">
-                            <h5><a href="#">차돌된장찌개</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="resources/img/categories/cat-5.jpg">
-                            <h5><a href="#">전복버터밥</a></h5>
-                        </div>
-                    </div>
+                    </c:forEach>
                 </div>
             </div>
         </div>
     </section>
-    
-
-
-    <!-- Blog Section Begin -->
     <section class="from-blog spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title from-blog__title">
-                        <h2>new 레시피</h2>
-                    </div>
-                </div>
+            <div class="section-title from-blog__title">
+                <h2>new 레시피</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="resources/img/blog/sidebar/food1.png" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> July 7,2024</li>
-                                
-                            </ul>
-                            <h5><a href="#">양배추스테이크</a></h5>
-                        <p>스테이크는 고기로만 만들 수 있다는 편견을 깨트린 양배추스테이크</p>
-
+               <c:forEach var="recipe" items="${allList}">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <c:url value='resources/img${recipe.recipe_title_img}' />
+                            </div>
+                            <div class="blog__item__text">
+                                <h5><a href="#">${recipe.recipe_name}</a></h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="resources/img/blog/sidebar/food2.png" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> July 7,2024</li>
-                             
-                            </ul>
-                            <h5><a href="#">훈제오리고기포케</a></h5>
-                        <p>아직 포케가 익숙하지 않은 분이라면 오리고기로 토핑을 한 훈제오리고기포케에 도전해보세요 !</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="resources/img/blog/sidebar/food3.png" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> July 7,2024</li>
-                                
-                            </ul>
-                            <h5><a href="#">훈제연어포케</a></h5>
-                            <p>해산물이 들어간 가장 대표적인 포케</p>
-                        </div>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
         </div>
     </section>
+    <!-- Categories Section Begin -->
+    
     <!-- Blog Section End -->
 
     <!-- Footer Section Begin -->
@@ -289,6 +210,7 @@
         function openChatbot() {
             window.open("/personalrecipe/chatbot", "PersonalTalk", "width=400,height=600");
         }
-    </script>
+        </script>
+   
 </body>
 </html>

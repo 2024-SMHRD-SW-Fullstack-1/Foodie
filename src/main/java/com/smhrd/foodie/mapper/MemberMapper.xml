@@ -14,5 +14,10 @@
     <delete id="delete" parameterType="com.smhrd.foodie.model.Member">
     	delete from member where id = #{mem_id}
     </delete>
- 	
- </mapper>
+
+</mapper>
+    
+
+ 
+ 
+ 

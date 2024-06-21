@@ -74,7 +74,7 @@
 
 html, body {
 	height: 100%;
-	font-family: "Cairo", sans-serif;
+	font-family: "나눔 고딕", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	color: #111111;
 	font-weight: 400;
-	font-family: "Cairo", sans-serif;
+	font-family: "나눔 고딕", sans-serif;
 }
 
 h1 {
@@ -91,7 +91,7 @@ h1 {
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 38px;
 }
 
 h3 {
@@ -107,12 +107,12 @@ h5 {
 }
 
 h6 {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 p {
-	font-size: 16px;
-	font-family: "Cairo", sans-serif;
+	font-size: 18px;
+	font-family: "나눔 고딕", sans-serif;
 	color: #6f6f6f;
 	font-weight: 400;
 	line-height: 26px;
@@ -254,7 +254,7 @@ ul, ol {
 keyframes loader { 0% {
 	-webkit-transform: rotate(0deg);
 	transform: rotate(0deg);
-	border: 4px solid #f44336;
+	border: 4px solid #f44338;
 	border-left-color: transparent;
 }
 
@@ -339,7 +339,7 @@ rotate
 (
 
 
-360deg
+380deg
 
 
 )
@@ -356,7 +356,7 @@ rotate
 (
 
 
-360deg
+380deg
 
 
 )
@@ -375,7 +375,7 @@ border
 solid
 
 
-#f44336
+#f44338
 ;
 
 
@@ -394,7 +394,7 @@ transparent
 @
 -webkit-keyframes loader { 0% {
 	-webkit-transform: rotate(0deg);
-	border: 4px solid #f44336;
+	border: 4px solid #f44338;
 	border-left-color: transparent;
 }
 
@@ -462,7 +462,7 @@ rotate
 (
 
 
-360deg
+380deg
 
 
 )
@@ -481,7 +481,7 @@ border
 solid
 
 
-#f44336
+#f44338
 ;
 
 
@@ -844,7 +844,7 @@ transparent
 }
 
 .hero__categories__all i {
-	font-size: 16px;
+	font-size: 18px;
 	color: #ffffff;
 	margin-right: 10px;
 }
@@ -877,7 +877,7 @@ transparent
 }
 
 .hero__categories ul li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	line-height: 39px;
 	display: block;
@@ -899,7 +899,7 @@ transparent
 .hero__search__form form .hero__search__categories {
 	width: 30%;
 	float: left;
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	font-weight: 700;
 	padding-left: 18px;
@@ -928,7 +928,7 @@ transparent
 	width: 70%;
 	border: none;
 	height: 48px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #b2b2b2;
 	padding-left: 20px;
 }
@@ -1142,11 +1142,11 @@ transparent
 
 .featured__item__pic__hover li:hover a i {
 	color: #ffffff;
-	transform: rotate(360deg);
+	transform: rotate(380deg);
 }
 
 .featured__item__pic__hover li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	height: 40px;
 	width: 40px;
@@ -1217,7 +1217,7 @@ transparent
 	background: #F3F6FA;
 	border: 1px solid #e6e6e6;
 	font-size: 14px;
-	color: #636363;
+	color: #638383;
 	margin-right: 10px;
 	line-height: 30px;
 	text-align: center;
@@ -1297,7 +1297,7 @@ transparent
 
 .breadcrumb__option a {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 18px;
 	color: #ffffff;
 	font-weight: 700;
 	margin-right: 20px;
@@ -1316,7 +1316,7 @@ transparent
 
 .breadcrumb__option span {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 18px;
 	color: #ffffff;
 }
 
@@ -1342,7 +1342,7 @@ transparent
 }
 
 .sidebar__item ul li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	line-height: 39px;
 	display: block;
@@ -1379,7 +1379,7 @@ transparent
 }
 
 .price-range-wrap .range-slider .price-input input {
-	font-size: 16px;
+	font-size: 18px;
 	color: #dd2222;
 	font-weight: 700;
 	max-width: 20%;
@@ -1450,7 +1450,7 @@ transparent
 }
 
 .sidebar__item__color label {
-	font-size: 16px;
+	font-size: 18px;
 	color: #333333;
 	position: relative;
 	padding-left: 32px;
@@ -1475,7 +1475,7 @@ transparent
 
 .sidebar__item__size {
 	display: inline-block;
-	margin-right: 16px;
+	margin-right: 18px;
 	margin-bottom: 10px;
 }
 
@@ -1575,11 +1575,11 @@ transparent
 
 .product__item__pic__hover li:hover a i {
 	color: #ffffff;
-	transform: rotate(360deg);
+	transform: rotate(380deg);
 }
 
 .product__item__pic__hover li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	height: 40px;
 	width: 40px;
@@ -1676,7 +1676,7 @@ transparent
 }
 
 .filter__sort span {
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	display: inline-block;
 }
@@ -1691,7 +1691,7 @@ transparent
 	line-height: 0;
 	padding-left: 18px;
 	padding-right: 30px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	font-weight: 700;
 	cursor: pointer;
@@ -1706,7 +1706,7 @@ transparent
 	border-right: 1.5px solid #1c1c1c;
 	height: 8px;
 	margin-top: 0;
-	right: 16px;
+	right: 18px;
 	width: 8px;
 	top: -5px;
 }
@@ -1736,7 +1736,7 @@ transparent
 }
 
 .filter__found h6 {
-	font-size: 16px;
+	font-size: 18px;
 	color: #b2b2b2;
 }
 
@@ -1815,11 +1815,11 @@ transparent
 
 .product__item__pic__hover li:hover a i {
 	color: #ffffff;
-	transform: rotate(360deg);
+	transform: rotate(380deg);
 }
 
 .product__item__pic__hover li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	height: 40px;
 	width: 40px;
@@ -1878,7 +1878,7 @@ transparent
 	font-weight: 700;
 	line-height: 28px;
 	text-align: center;
-	margin-right: 16px;
+	margin-right: 18px;
 	-webkit-transition: all, 0.3s;
 	-moz-transition: all, 0.3s;
 	-ms-transition: all, 0.3s;
@@ -1922,7 +1922,7 @@ transparent
 .product__details__text h3 {
 	color: #252525;
 	font-weight: 700;
-	margin-bottom: 16px;
+	margin-bottom: 18px;
 }
 
 .product__details__text .product__details__rating {
@@ -1952,16 +1952,16 @@ transparent
 }
 
 .product__details__text .primary-btn {
-	padding: 16px 28px 14px;
+	padding: 18px 28px 14px;
 	margin-right: 6px;
 	margin-bottom: 5px;
 }
 
 .product__details__text .heart-icon {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
-	padding: 13px 16px 13px;
+	padding: 13px 18px 13px;
 	background: #f5f5f5;
 }
 
@@ -1972,10 +1972,10 @@ transparent
 }
 
 .product__details__text ul li {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	list-style: none;
-	line-height: 36px;
+	line-height: 38px;
 }
 
 .product__details__text ul li b {
@@ -2021,7 +2021,7 @@ transparent
 .pro-qty input {
 	height: 100%;
 	width: 100%;
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	width: 50px;
 	border: none;
@@ -2031,7 +2031,7 @@ transparent
 
 .pro-qty .qtybtn {
 	width: 35px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	cursor: pointer;
 	display: inline-block;
@@ -2077,7 +2077,7 @@ transparent
 }
 
 .product__details__tab .nav-tabs li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #999999;
 	font-weight: 700;
 	border: none;
@@ -2243,7 +2243,7 @@ transparent
 	width: 255px;
 	height: 46px;
 	border: 1px solid #cccccc;
-	font-size: 16px;
+	font-size: 18px;
 	color: #b2b2b2;
 	text-align: center;
 	display: inline-block;
@@ -2280,7 +2280,7 @@ transparent
 }
 
 .shoping__checkout ul li {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	font-weight: 700;
 	list-style: none;
@@ -2325,7 +2325,7 @@ transparent
 }
 
 .checkout h6 span {
-	font-size: 16px;
+	font-size: 18px;
 	color: #6AB963;
 	margin-right: 5px;
 }
@@ -2365,7 +2365,7 @@ transparent
 	height: 46px;
 	border: 1px solid #ebebeb;
 	padding-left: 20px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #b2b2b2;
 	border-radius: 4px;
 }
@@ -2384,7 +2384,7 @@ transparent
 
 .checkout__input__checkbox label {
 	position: relative;
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
 	padding-left: 40px;
 	cursor: pointer;
@@ -2408,7 +2408,7 @@ transparent
 	position: absolute;
 	left: 0;
 	top: 4px;
-	height: 16px;
+	height: 18px;
 	width: 14px;
 	border: 1px solid #a6a6a6;
 	content: "";
@@ -2460,7 +2460,7 @@ transparent
 }
 
 .checkout__order ul li {
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	line-height: 40px;
 	list-style: none;
@@ -2531,7 +2531,7 @@ transparent
 }
 
 .blog__item__text ul li {
-	font-size: 16px;
+	font-size: 18px;
 	color: #b2b2b2;
 	list-style: none;
 	display: inline-block;
@@ -2611,7 +2611,7 @@ transparent
 }
 
 .blog__sidebar__item ul li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #666666;
 	line-height: 48px;
 	-webkit-transition: all, 0.3s;
@@ -2636,7 +2636,7 @@ transparent
 .blog__sidebar__search form input {
 	width: 100%;
 	height: 46px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	padding-left: 15px;
 	border: 1px solid #e1e1e1;
@@ -2648,7 +2648,7 @@ transparent
 }
 
 .blog__sidebar__search form button {
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	background: transparent;
 	border: none;
@@ -2695,7 +2695,7 @@ transparent
 }
 
 .blog__sidebar__item__tags a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	background: #f5f5f5;
 	display: inline-block;
@@ -2725,7 +2725,7 @@ transparent
 }
 
 .blog__details__hero__text ul li {
-	font-size: 16px;
+	font-size: 18px;
 	color: #ffffff;
 	list-style: none;
 	display: inline-block;
@@ -2807,7 +2807,7 @@ transparent
 }
 
 .blog__details__author__text span {
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 }
 
@@ -2816,7 +2816,7 @@ transparent
 }
 
 .blog__details__widget ul li {
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	list-style: none;
 	line-height: 30px;
@@ -2861,9 +2861,9 @@ transparent
 }
 
 .footer__about ul li {
-	font-size: 16px;
+	font-size: 18px;
 	color: #1c1c1c;
-	line-height: 36px;
+	line-height: 38px;
 	list-style: none;
 }
 
@@ -2914,7 +2914,7 @@ transparent
 
 .footer__widget form input {
 	width: 100%;
-	font-size: 16px;
+	font-size: 18px;
 	padding-left: 20px;
 	color: #1c1c1c;
 	height: 46px;
@@ -2937,7 +2937,7 @@ transparent
 	display: inline-block;
 	height: 41px;
 	width: 41px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #404040;
 	border: 1px solid #ededed;
 	border-radius: 50%;
@@ -2993,7 +2993,7 @@ transparent
 }
 
 .contact__widget span {
-	font-size: 36px;
+	font-size: 38px;
 	color: var(--primary-color);
 }
 
@@ -3024,7 +3024,7 @@ transparent
 .map .map-inside {
 	position: absolute;
 	left: 50%;
-	top: 160px;
+	top: 180px;
 	-webkit-transform: translateX(-175px);
 	-ms-transform: translateX(-175px);
 	transform: translateX(-175px);
@@ -3074,7 +3074,7 @@ transparent
 
 .map .map-inside .inside-widget ul li {
 	list-style: none;
-	font-size: 16px;
+	font-size: 18px;
 	color: #666666;
 	line-height: 26px;
 }
@@ -3100,7 +3100,7 @@ transparent
 .contact-form form input {
 	width: 100%;
 	height: 50px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	padding-left: 20px;
 	margin-bottom: 30px;
@@ -3115,7 +3115,7 @@ transparent
 .contact-form form textarea {
 	width: 100%;
 	height: 150px;
-	font-size: 16px;
+	font-size: 18px;
 	color: #6f6f6f;
 	padding-left: 20px;
 	margin-bottom: 24px;
@@ -3137,7 +3137,7 @@ transparent
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1600px;
+		max-width: 1800px;
 	}
 }
 
@@ -3342,7 +3342,7 @@ transparent
 	}
 	.humberger__menu__wrapper .slicknav_nav a {
 		color: #1c1c1c;
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 600;
 		margin: 0;
 		border-bottom: 1px solid #e1e1e1;
@@ -3599,7 +3599,7 @@ transparent
 	}
 	.humberger__menu__wrapper .slicknav_nav a {
 		color: #1c1c1c;
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 600;
 		margin: 0;
 		border-bottom: 1px solid #e1e1e1;
@@ -3723,7 +3723,7 @@ transparent
 	display: block;
 	padding: 10px 15px;
 	color: #1c1c1c;
-	font-size: 16px;
+	font-size: 18px;
 	text-decoration: none;
 	transition: background-color 0.3s;
 }
