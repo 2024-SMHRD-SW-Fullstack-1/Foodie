@@ -12,16 +12,19 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3a115195d8.js" crossorigin="anonymous"></script>
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/bootstrap.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/font-awesome.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/elegant-icons.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/nice-select.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/jquery-ui.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/owl.carousel.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/slicknav.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>" type="text/css">
 </head>
 
 <body>
@@ -46,44 +49,11 @@
             <!-- 장바구니 총 금액 -->
         </div>
         <div class="humberger__menu__widget">
-            <!-- <div class="header__top__right__language">
-                <img src="resources/img/language.png" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                	언어 선택
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div> -->
             <div class="header__top__right__auth">
                 <a href="login"><i class="fa fa-user"></i> 로그인 / 회원가입</a>
             </div>
         </div>
-        <!-- 상단 메뉴바  -->
-        <!-- <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li class="active"><a href="index">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="#">Shop Details</a></li>
-                        <li><a href="cart">Shoping Cart</a></li>
-                        <li><a href="#">Check Out</a></li>
-                        <li><a href="#">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">레시피</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav> -->
         <div id="mobile-menu-wrap"></div>
-        <!-- <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-        </div> -->
         <div class="humberger__menu__contact">
             <ul>
             	<!-- 이메일 -->
@@ -99,7 +69,7 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <!-- 카테고리 -->
+    <!-- 상단 카테고리 -->
     <section class="hero hero-normal">
         <div class="container">
             <div class="row">
@@ -110,18 +80,15 @@
                             <span>카테고리</span>
                         </div>
                         <ul>
-                            <li><a href="#">초간단 레시피</a></li>
-                            <li><a href="#">혼밥 레시피</a></li>
-                            <li><a href="#">자취생 레시피</a></li>
-                            <li><a href="#">손님 접대 레시피</a></li>
-                            <li><a href="#">다이어트 레시피</a></li>
-                            <li><a href="recipe">제철 요리 레시피</a></li>
-                            <li><a href="#">이국적인 요리 레시피</a></li>
-                            <li><a href="#">별미 / 야식 레시피</a></li>
-                            <li><a href="recipe">디저트 레시피</a></li>
-                            <li><a href="#">밑반찬 레시피</a></li>
-                            <li><a href="shopgrid">재료 사러가기</a></li>
-                        </ul>
+	                    	<li><a href="<c:url value='/recipe/주부'/>">주부 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/키즈'/>">키즈 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/자취생'/>">자취생 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/다이어트'/>">다이어트 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/캠핑'/>">캠핑 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/파티'/>">파티 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/야식'/>">야식 레시피</a></li>
+	                        <li><a href="<c:url value='/shopgrid/채소/1'/>">재료 사러가기</a></li>
+	                    </ul>
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -149,72 +116,41 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Breadcrumb Section Begin -->
-	<section class="breadcrumb-section set-bg" data-setbg="resources/img/breadcrumb.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>레시피</h2>
-                        <!-- <div class="breadcrumb__option">
-                            <a href="./index.jsp">카테고리</a>
-                            <a href="./index.jsp">수산</a>
-                            <span>Vegetable’s Package</span>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
-
     <!-- Product Details Section Begin -->
     <section class="product-details spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="product__details__pic">
-                        <div class="product__details__pic__item">
-                        	<!-- 재료 대표 사진 -->
-                            <img class="product__details__pic__item--large"
-                                src="resources/img/recipe/recipe1.jpg" alt="">
-                        </div>
-                        <!-- 재료 사진 슬라이더 -->
-                        <!-- <div class="product__details__pic__slider owl-carousel">
-                            <img data-imgbigurl="resources/img/product/corvina.jpg"
-                                src="resources/img/product/corvina.jpg" alt="">
-                            <img data-imgbigurl="resources/img/product/corvina-2.jpg"
-                                src="resources/img/product/corvina-2.jpg" alt="">
-                            <img data-imgbigurl="resources/img/product/corvina3.jpg"
-                                src="resources/img/product/corvina3.jpg" alt="">
-                            <img data-imgbigurl="resources/img/product/corvina4.jpg"
-                                src="resources/img/product/corvina4.jpg" alt="">
-                        </div> -->
+        	<div class="col-lg-12 col-md-12">
+	        	<div class="product__details__pic">
+	            	<div class="product__details__pic__item">
+	                	<!-- 레시피 대표 사진 -->
+	                	<img class="product__details__pic__item--large"
+	                    	src="<c:url value='../resources/img${recipe.recipe_title_img }'/>" alt="">
+	                </div>
+	            </div>
+	        </div>
+	        <br></br>
+	        <div class="col-lg-12 col-md-12">
+            	<div class="product__details__text">
+                    <div class="row">
+                    	<div class="col-lg-8 col-md-8">
+                    		<!-- 레시피명 -->
+	                        <h3>${recipe.getRecipe_name() }</h3>
+	                        <c:forEach items="${recipecontent }" var="list">
+	                        	<h5 style="line-height: 2.0;">${list }</h5>
+				            </c:forEach>
+	                        <br></br>
+                    	</div>
+                    	<div class="col-lg-4 col-md-4">
+	                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+	                        
+	                        <ul>
+	                            <li><b>인분 <i class="fa-solid fa-utensils i-recipe"></i></b> <span>${recipe.getRecipe_portion() }인분</span></li>
+	                            <li><b>시간 <i class="fa-solid fa-clock i-recipe"></i></b> <span>${recipe.getRecipe_time() }분 이내</span></li>
+	                        </ul>
+                    	</div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="product__details__text">
-                        <h3>양배추참치덮밥</h3>
-                        <!-- <div class="product__details__rating">
-                        	평점
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <span>(18 reviews)</span>
-                        </div> -->
-                        <!-- 가격 -->
-                        <h5>간편하고 손쉽게 완성할 수 있는 양배추덮밥</h5>
-                        <br></br>
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                        <ul>
-                            <li><b>양</b> <span>1인분</span></li>
-                            <li><b>시간</b> <span>15분 이내</span></li>
-                            <li><b>난이도</b> <span>초급</span></li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <div class="col-lg-12">
                     <div class="product__details__tab">
                         <ul class="nav nav-tabs" role="tablist">
@@ -231,24 +167,17 @@
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>재료</h6>
-                                    <p>양배추 200g</p>
-                                    <p>현미밥 200g</p>
-                                    <p>참치캔 150g</p>
-                                    <p>양파 1/2개</p>
-                                    <p>마늘 2쪽</p>
-                                    <p>올리브유 2큰술</p>
-                                    <p>굴소스 1큰술</p>
-                                    <p>들기름·파슬리 약간씩</p>
+                                    <c:forEach items="${recipe.getRecipe_all_ingre().split(', ') }" var="recipe">
+                                    	<p>${recipe }</p>
+			                    	</c:forEach>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-3" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>조리순서</h6>
-                                    <p>1. 양배추는 깨끗이 씻어 꼭지를 제거한 후 적당한 크기로 채 썰어주세요.</p>
-                                    <p>2. 양파는 채 썰고, 마늘은 다져주세요.</p>
-									<p>3. 중불로 달군 팬에 올리브유를 두르고 다진 마늘을 넣어 향이 올라오면 양파와 양배추를 넣고 볶아주세요.</p>
-									<p>4. ③의 숨이 죽으면 현미밥, 참치, 굴소스를 넣어 1분간 볶다가 불을 끄고 들기름을 둘러주세요.</p>
-									<p>5. 그릇에 현미밥을 담고 ④를 얹은 후 파슬리를 뿌려 완성해 주세요.</p>
+                                    <c:forEach items="${recipecook }" var="recipecook" varStatus="loop">
+                                    	<p>${loop.index + 1}. ${recipecook }</p>
+			                    	</c:forEach>
                                 </div>
                             </div>
                         </div>
@@ -271,145 +200,28 @@
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/cabbage.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">양배추</a></h6>
-                            <h5>3,850원</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/garlic.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">깐마늘</a></h6>
-                            <h5>3,200원</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/onion.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">깐양파</a></h6>
-                            <h5>2,800원</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/tuna.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">참치</a></h6>
-                            <h5>3,340원</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-            	<div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/oyster_sauce.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">굴소스</a></h6>
-                            <h5>7,200원</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/brownrice.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">현미</a></h6>
-                            <h5>8,300원</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/olive_oil.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">올리브유</a></h6>
-                            <h5>31,500원</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <!-- <div class="product__item">
-                    	<input class="check" type="checkbox" checked></input>
-                        <div class="product__item__pic set-bg" data-setbg="resources/img/product/tuna.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">참치</a></h6>
-                            <h5>3,340원</h5>
-                        </div>
-                    </div> -->
-            		
-                </div>
-            </div>
-        </div>
+            	<c:forEach items="${recipe_ingre }" var="list">
+            		<div class="col-lg-3 col-md-4 col-sm-6">
+	                    <div class="product__item">
+	                    	<input class="check" type="checkbox" checked></input>
+	                        <div class="product__item__pic set-bg" data-setbg="<c:url value='../resources/img${list.ingre_img }'/>">
+	                            <ul class="product__item__pic__hover">
+	                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+	                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+	                            </ul>
+	                        </div>
+	                        <div class="product__item__text">
+	                            <h6><a href="<c:url value='/shopdetail/${list.ingre_name }'/>">${list.ingre_name }</a></h6>
+	                            <h5>${list.ingre_price }원</h5>
+	                        </div>
+                    	</div>
+                	</div>
+                </c:forEach>
+			</div>
+		</div>
     </section>
     <section class="related-product">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title related__product__title">
-                        <h2>대체 상품</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-            	<p class="float-center">대체할 상품이 없습니다.</p>
-            	<br></br>
-            </div>
             <a href="#" class="primary-btn float-center">선택 상품 장바구니 담기</a>
             <br></br>
         </div>
@@ -421,13 +233,13 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="resources/js/jquery-3.3.1.min.js"></script>
-    <script src="resources/js/bootstrap.min.js"></script>
-    <script src="resources/js/jquery.nice-select.min.js"></script>
-    <script src="resources/js/jquery-ui.min.js"></script>
-    <script src="resources/js/jquery.slicknav.js"></script>
-    <script src="resources/js/mixitup.min.js"></script>
-    <script src="resources/js/owl.carousel.min.js"></script>
-    <script src="resources/js/main.js"></script>
+    <script src="<c:url value='/resources/js/jquery-3.3.1.min.js' />"></script>
+	<script src="<c:url value='/resources/js/bootstrap.min.js' />"></script>
+	<script src="<c:url value='/resources/js/jquery.nice-select.min.js' />"></script>
+	<script src="<c:url value='/resources/js/jquery-ui.min.js' />"></script>
+	<script src="<c:url value='/resources/js/jquery.slicknav.js' />"></script>
+	<script src="<c:url value='/resources/js/mixitup.min.js' />"></script>
+	<script src="<c:url value='/resources/js/owl.carousel.min.js' />"></script>
+	<script src="<c:url value='/resources/js/main.js' />"></script>
 </body>
 </html>

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="<c:url value='/resources/css/owl.carousel.min.css'/>" type="text/css">
     <link rel="stylesheet" href="<c:url value='/resources/css/slicknav.min.css'/>" type="text/css">
     <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>" type="text/css">
+    
 </head>
 
 <body>
@@ -75,15 +76,16 @@
                             <span>카테고리</span>
                         </div>
                         <ul>
-                            <li><a href="recipe/housewife">주부 레시피</a></li>
-                            <li><a href="#">키즈 레시피</a></li>
-                            <li><a href="#">자취생 레시피</a></li>
-                            <li><a href="#">다이어트 레시피</a></li>
-                            <li><a href="#">캠핑 레시피</a></li>
-                            <li><a href="#">파티 레시피</a></li>
-                            <li><a href="recipe">야식 레시피</a></li>
-                            <li><a href="shopgrid">재료 사러가기</a></li>
-                        </ul>
+                        	<!-- 상단 카테고리 -->
+	                    	<li><a href="<c:url value='/recipe/주부'/>">주부 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/키즈'/>">키즈 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/자취생'/>">자취생 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/다이어트'/>">다이어트 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/캠핑'/>">캠핑 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/파티'/>">파티 레시피</a></li>
+	                        <li><a href="<c:url value='/recipe/야식'/>">야식 레시피</a></li>
+	                        <li><a href="<c:url value='/shopgrid/채소/1'/>">재료 사러가기</a></li>
+	                    </ul>
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -120,14 +122,15 @@
                         <div class="sidebar__item">
                             <h4>레시피</h4>
                             <ul>
-	                            <li><a href="recipe/housewife">주부 레시피</a></li>
-	                            <li><a href="#">키즈 레시피</a></li>
-	                            <li><a href="#">자취생 레시피</a></li>
-	                            <li><a href="#">다이어트 레시피</a></li>
-	                            <li><a href="#">캠핑 레시피</a></li>
-	                            <li><a href="#">파티 레시피</a></li>
-	                            <li><a href="recipe">야식 레시피</a></li>
-	                        </ul>
+                            	<!-- 좌측 카테고리 -->
+		                    	<li><a href="<c:url value='/recipe/주부'/>">주부 레시피</a></li>
+		                        <li><a href="<c:url value='/recipe/키즈'/>">키즈 레시피</a></li>
+		                        <li><a href="<c:url value='/recipe/자취생'/>">자취생 레시피</a></li>
+		                        <li><a href="<c:url value='/recipe/다이어트'/>">다이어트 레시피</a></li>
+		                        <li><a href="<c:url value='/recipe/캠핑'/>">캠핑 레시피</a></li>
+		                        <li><a href="<c:url value='/recipe/파티'/>">파티 레시피</a></li>
+		                        <li><a href="<c:url value='/recipe/야식'/>">야식 레시피</a></li>
+		                    </ul>
                         </div>
                         <div class="sidebar__item">
                         </div>
@@ -136,51 +139,36 @@
                 <div class="col-lg-9 col-md-7">
                     <div class="product__discount">
                         <div class="section-title product__discount__title">
-                            <h2> 레시피</h2>
+                            <h2>${recipeList.get(0).getRecipe_cat() } 레시피</h2>
                         </div>
                     </div>
                     <div class="filter__item">
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="filter__found">
-                                    <h6><span>10</span> 개의 레시피</h6>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-3">
-                                <div class="filter__option">
-                                    <span class="icon_grid-2x2"></span>
-                                    <span class="icon_ul"></span>
+                                    <h6><span>${recipeList.size() }</span> 개의 레시피</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="recipelist">
                     	<c:forEach items="${recipeList }" var="list">
                     		<div class="col-lg-4 col-md-6 col-sm-6">
 	                            <div class="product__item">
-	                                <div class="product__item__pic set-bg" data-setbg="resources/img/recipe/recipe1.jpg">
+	                                <div class="product__item__pic set-bg" data-setbg="<c:url value='../resources/img${list.recipe_title_img }'/>">
 	                                    <ul class="product__item__pic__hover">
 	                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
 	                                    </ul>
 	                                </div>
 	                                <div class="product__item__text">
-	                                    <h6><a href="recipedetail">${list.recipe_name }</a></h6>
+	                                    <h6><a href="${pageContext.request.contextPath }/recipedetails/${list.recipe_name}">${list.recipe_name }</a></h6>
 	                                </div>
 	                            </div>
 	                        </div>
 					      </c:forEach>
-                        
                     </div>
-                    <!-- <div class="product__pagination">
-                    	<a href="#"><i class="fa fa-long-arrow-left"></i></a>
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -200,5 +188,6 @@
 	<script src="<c:url value='/resources/js/mixitup.min.js' />"></script>
 	<script src="<c:url value='/resources/js/owl.carousel.min.js' />"></script>
 	<script src="<c:url value='/resources/js/main.js' />"></script>
+	
 </body>
 </html>
